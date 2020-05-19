@@ -11,7 +11,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 
-let teamMembers = []
+const teamMembers = []
 
 
 askQuestions();
@@ -71,7 +71,7 @@ inquirer.prompt([
     }else if (response.newMember === "Intern"){
         internQuestions();
     }else{
-        console.log(teamMembers)
+        fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
     }
 });
 }
@@ -141,9 +141,6 @@ createTeamQuestions();
 });
 
 }
-
-
-
 
 
 
