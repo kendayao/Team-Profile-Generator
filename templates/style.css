@@ -1,11 +1,19 @@
 .jumbotron{
-    background-color:#ffecc7;
+    background-color: #00a8cc;
+    color: white;
+    font-family: 'Oswald', sans-serif;
 }
 
 body{
-    background-color: #f0f0f0 ;
+    background-color: #dbdbdb ;
 }
 
 .employee-card{
     margin: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.card-header {
+    background-color: #00a8cc;
+    color: white;
 }

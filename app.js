@@ -71,6 +71,7 @@ inquirer.prompt([
     }else if (response.newMember === "Intern"){
         internQuestions();
     }else{
+        console.log("Team Profile Successfully Generated!")
         fs.writeFileSync(outputPath, render(teamMembers), function(error){
             console.log(error)
         });
