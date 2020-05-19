@@ -11,6 +11,9 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 
+let teamMembers = []
+
+
 askQuestions();
 
 
@@ -43,6 +46,8 @@ inquirer.prompt([
     }
 
 ]).then(function(response){
+    let manager = new Manager(response.managerName, response.managerID, response.managerEmail, response.managerOfficeNumber)
+    teamMembers.push(manager)
     createTeamQuestions();
     
 });
@@ -66,7 +71,7 @@ inquirer.prompt([
     }else if (response.newMember === "Intern"){
         internQuestions();
     }else{
-        console.log("done with test")
+        console.log(teamMembers)
     }
 });
 }
@@ -96,6 +101,8 @@ inquirer.prompt([
     message: "What is your engineer's Git Hub username?"
     }
 ]).then(function(response){
+    let engineer= new Engineer(response.engineerName, response.engineerID, response.engineerEmail, response.engineerUsername)
+    teamMembers.push(engineer)
 createTeamQuestions();
 
 });
@@ -127,11 +134,18 @@ inquirer.prompt([
     message: "What school is your intern currently attending?"
     }
 ]).then(function(response){
+    let intern = new Intern(response.internName, response.internID, response.internEmail, response.internSchool)
+    teamMembers.push(intern)
 createTeamQuestions();
 
 });
 
 }
+
+
+
+
+
 
 
 
