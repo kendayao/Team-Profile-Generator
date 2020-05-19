@@ -11,6 +11,55 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 
+askQuestions();
+
+
+function askQuestions (){
+
+managerQuestions();
+function managerQuestions(){
+
+inquirer.prompt([
+    {
+    type: "input",
+    name: "managerName",
+    message: "What is your manager's name?"
+    },
+    {
+    type: "input",
+    name: "managerID",
+    message: "What is your manager's id number?"
+    },
+    {
+    type: "input",
+    name: "managerEmail",
+    message: "What is your manager's email?"
+    },
+    {
+    type: "input",
+    name: "managerOfficeNumber",
+    message: "What is your manager's office number?"
+    }
+]).then(function(response){
+
+
+});
+
+
+
+
+
+
+}
+
+
+
+
+
+
+}
+
+
 
 
 
@@ -37,3 +86,66 @@ const render = require("./lib/htmlRenderer");
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
+
+
+
+
+
+
+
+
+
+
+
+
+inquirer.prompt([
+    {
+    type: "input",
+    name: "engineerName",
+    message: "What is your engineer's name?"
+    },
+    {
+    type: "input",
+    name: "engineerID",
+    message: "What is your engineer's id number?"
+    },
+    {
+    type: "input",
+    name: "engineerEmail",
+    message: "What is your engineer's email?"
+    },
+    {
+    type: "input",
+    name: "engineerUsername",
+    message: "What is your engineer's Git Hub username?"
+    }
+]).then(function(response){
+
+
+});
+
+inquirer.prompt([
+    {
+    type: "input",
+    name: "internName",
+    message: "What is your manager's name?"
+    },
+    {
+    type: "input",
+    name: "internID",
+    message: "What is your manager's id number?"
+    },
+    {
+    type: "input",
+    name: "internEmail",
+    message: "What is your manager's email?"
+    },
+    {
+    type: "input",
+    name: "internSchool",
+    message: "What school is your intern currently attending?"
+    }
+]).then(function(response){
+
+
+});
