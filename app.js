@@ -62,7 +62,7 @@ inquirer.prompt([
         type: "list",
         name: "newMember",
         message: "Choose which team member you would like to add?",
-        choices: ["Engineer", "Intern", "No, I would not like to add another team member"]
+        choices: ["Engineer", "Intern", "I would not like to add another team member"]
     },  
 
 ]).then(function(response){
@@ -71,7 +71,9 @@ inquirer.prompt([
     }else if (response.newMember === "Intern"){
         internQuestions();
     }else{
-        fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+        fs.writeFileSync(outputPath, render(teamMembers), function(error){
+            console.log(error)
+        });
     }
 });
 }
