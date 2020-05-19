@@ -14,6 +14,7 @@ const render = require("./lib/htmlRenderer");
 askQuestions();
 
 
+
 function askQuestions (){
 
 managerQuestions();
@@ -40,15 +41,95 @@ inquirer.prompt([
     name: "managerOfficeNumber",
     message: "What is your manager's office number?"
     }
-]).then(function(response){
 
+]).then(function(response){
+    createTeamQuestions();
+    
+});
+}
+}
+
+
+function createTeamQuestions(){
+
+inquirer.prompt([
+    {
+        type: "list",
+        name: "newMember",
+        message: "Choose which team member you would like to add?",
+        choices: ["Engineer", "Intern", "No, I would not like to add another team member"]
+    },  
+
+]).then(function(response){
+    if(response.newMember === "Engineer"){
+        engineerQuestions();
+    }else if (response.newMember === "Intern"){
+        internQuestions();
+    }else{
+        console.log("done with test")
+    }
+});
+}
+
+
+
+function engineerQuestions(){
+inquirer.prompt([
+    {
+    type: "input",
+    name: "engineerName",
+    message: "What is your engineer's name?"
+    },
+    {
+    type: "input",
+    name: "engineerID",
+    message: "What is your engineer's id number?"
+    },
+    {
+    type: "input",
+    name: "engineerEmail",
+    message: "What is your engineer's email?"
+    },
+    {
+    type: "input",
+    name: "engineerUsername",
+    message: "What is your engineer's Git Hub username?"
+    }
+]).then(function(response){
+createTeamQuestions();
 
 });
 
+}
 
 
+function internQuestions(){
 
+inquirer.prompt([
+    {
+    type: "input",
+    name: "internName",
+    message: "What is your intern's name?"
+    },
+    {
+    type: "input",
+    name: "internID",
+    message: "What is your intern's id number?"
+    },
+    {
+    type: "input",
+    name: "internEmail",
+    message: "What is your intern's email?"
+    },
+    {
+    type: "input",
+    name: "internSchool",
+    message: "What school is your intern currently attending?"
+    }
+]).then(function(response){
+createTeamQuestions();
 
+});
 
 }
 
@@ -57,7 +138,6 @@ inquirer.prompt([
 
 
 
-}
 
 
 
@@ -98,54 +178,5 @@ inquirer.prompt([
 
 
 
-inquirer.prompt([
-    {
-    type: "input",
-    name: "engineerName",
-    message: "What is your engineer's name?"
-    },
-    {
-    type: "input",
-    name: "engineerID",
-    message: "What is your engineer's id number?"
-    },
-    {
-    type: "input",
-    name: "engineerEmail",
-    message: "What is your engineer's email?"
-    },
-    {
-    type: "input",
-    name: "engineerUsername",
-    message: "What is your engineer's Git Hub username?"
-    }
-]).then(function(response){
 
 
-});
-
-inquirer.prompt([
-    {
-    type: "input",
-    name: "internName",
-    message: "What is your manager's name?"
-    },
-    {
-    type: "input",
-    name: "internID",
-    message: "What is your manager's id number?"
-    },
-    {
-    type: "input",
-    name: "internEmail",
-    message: "What is your manager's email?"
-    },
-    {
-    type: "input",
-    name: "internSchool",
-    message: "What school is your intern currently attending?"
-    }
-]).then(function(response){
-
-
-});
