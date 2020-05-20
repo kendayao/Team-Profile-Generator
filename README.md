@@ -17,7 +17,7 @@ This is a Software Engineering Team Generator. Node.js and javascript were both 
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
-* [Deployed Application URL](#deployed-application-URL)
+* [Deployed Application](#deployed-application)
 
 
 
@@ -65,9 +65,9 @@ npm test (testing with jest)
 
 For any questions, please contact kendayao at kendayao@gmail.com
 
-## Deployed Application URL
+## Deployed Application 
 
-
-Video of deployed application: https://www.youtube.com/watch?v=4nsxdE4tEJY&feature=youtu.be
+![](images/appimage.png)
+Video of deployed application: https://youtu.be/9Ur1j38NJ8U
 
 
