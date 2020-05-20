@@ -17,3 +17,7 @@ body{
     background-color: #00a8cc;
     color: white;
 }
+
+.card{
+    min-width: 25%;
+}
