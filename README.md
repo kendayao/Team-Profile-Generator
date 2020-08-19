@@ -3,7 +3,7 @@
 
 ## Description
 
-Team Profile Generator is a command line interface application that generates that displays the software engineering team onto a webpage based on the user input.  This application prompts a user for information about their team (manager, engineer, intern). Then the application displays the team members information on an HTML page.
+Team Profile Generator is a command line interface application that generates and displays the software engineering team onto a webpage based on the user input.  This application prompts a user for information about their team (manager, engineer, intern). Then the application displays the team members information on an HTML page.
 
 
 ## Table of Contents
