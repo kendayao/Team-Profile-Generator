@@ -3,13 +3,13 @@
 
 ## Description
 
-
-This is a Software Engineering Team Generator. Node.js and javascript were both used for this project. This application prompts a user for information about their team (manager, engineer, intern). Then the application displays the team member infomration on an HTML page.
+Team Profile Generator is a command line interface application that generates that displays the software engineering team onto a webpage based on the user input.  This application prompts a user for information about their team (manager, engineer, intern). Then the application displays the team members information on an HTML page.
 
 
 ## Table of Contents
 
 * [Description](#description)
+* [Technology](#technology)
 * [User Story](#user-story)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -19,6 +19,14 @@ This is a Software Engineering Team Generator. Node.js and javascript were both 
 * [Questions](#questions)
 * [Deployed Application](#deployed-application)
 
+## Technology
+
+- HTML
+- CSS 
+- Bootstrap
+- Node
+- Objected Oriented Programming
+- JavaScript
 
 
 ## User Story
@@ -67,7 +75,12 @@ For any questions, please contact kendayao at kendayao@gmail.com
 
 ## Deployed Application 
 
-![](images/appimage.png)
 Video of deployed application: https://youtu.be/9Ur1j38NJ8U
+
+
+
+
+![](images/appimage.png)
+
 
 
