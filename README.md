@@ -27,6 +27,7 @@ Team Profile Generator is a command line interface application that generates th
 - Node
 - Objected Oriented Programming
 - JavaScript
+- Jest (code testing)
 
 
 ## User Story
